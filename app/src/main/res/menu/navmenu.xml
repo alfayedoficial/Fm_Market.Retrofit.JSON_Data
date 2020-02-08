@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+	 <item
+		  android:id="@+id/recycleritem"
+		  android:title="recycler" />
+	 <item
+		  android:id="@+id/defaultItem1"
+		  android:title="default_Item" />
+	 <item
+		  android:id="@+id/defaultItem2"
+		  android:title="default_Item" />
+</menu>
