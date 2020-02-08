@@ -14,7 +14,7 @@ public class APIClient {
 
     public static Retrofit getClient() {
         if (retrofit == null) {
-            String url = "https://5bcce576cf2e850013874767.mockapi.io/";
+            String url = "https://5bcce576cf2e850013874767.mockapi.io";
             retrofit = new Retrofit.Builder()
                     .baseUrl(url)
                     .addConverterFactory(GsonConverterFactory.create()).build();

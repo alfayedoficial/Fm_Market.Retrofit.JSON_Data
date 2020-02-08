@@ -8,8 +8,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.alialfayed.marketapp.R;
+import com.alialfayed.marketapp.model.CategoryItems;
 import com.alialfayed.marketapp.model.ViewPagerItems;
 import com.alialfayed.marketapp.view.activities.MainActivity;
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 import java.util.Objects;
@@ -25,6 +27,7 @@ import androidx.viewpager.widget.PagerAdapter;
  */
 public class ViewPagerCatAdapter extends PagerAdapter {
     private ArrayList<ViewPagerItems> viewpagerItems = new ArrayList<>();
+//    private ArrayList<CategoryItems> categoryItems = new ArrayList<>();
     private MainActivity mainActivity;
     public ViewPagerCatAdapter(MainActivity mActivity , ArrayList<ViewPagerItems> items)
     {
@@ -47,10 +50,13 @@ public class ViewPagerCatAdapter extends PagerAdapter {
         View viewitem = Objects.requireNonNull(inflater).inflate(R.layout.viewpagercat_item, container, false);
         ViewPagerItems itemsModel = viewpagerItems.get(position);
         ImageView imgview_item = (ImageView) viewitem.findViewById(R.id.imgview_item);
-        //TODO get Image by retrofit
         imgview_item.setImageResource(itemsModel.getImgItem());
         TextView txtTitle = viewitem.findViewById(R.id.txtTile_item);
         txtTitle.setText(itemsModel.getTitleItem());
+//        //TODO get Image by retrofit
+//        CategoryItems itemsModel =categoryItems.get(position);
+//        txtTitle.setText(categoryItems.get(position).getName());
+//        Glide.with(mainActivity).load(categoryItems.get(position).getCategory_img()).into(imgview_item);
 
         container.addView(viewitem);
         return viewitem;
